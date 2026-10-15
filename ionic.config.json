@@ -1,0 +1,7 @@
+{
+  "name": "TiltBall",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,151 @@
+// ===== Black & Gold Premium Theme =====
+$gold: #d4af37;
+$gold-light: #f5d77a;
+$gold-dark: #8a6d1d;
+$black: #0a0a0a;
+$charcoal: #151515;
+$cream: #f5e6b3;
+
+.premium-content {
+  --background: radial-gradient(circle at top, #1c1c1c 0%, #000000 70%);
+}
+
+// Header
+.gold-toolbar {
+  --background: linear-gradient(90deg, #000000, #1a1a1a, #000000);
+  --color: #{$gold-light};
+  --border-width: 0 0 1px 0;
+  --border-color: #{$gold};
+
+  ion-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+// Card
+ion-card {
+  --background: #{$charcoal};
+  background: $charcoal;
+  border: 1px solid $gold-dark;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.12);
+}
+
+ion-card-title {
+  color: $gold;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 1px;
+}
+
+ion-card-subtitle {
+  color: $gold-dark;
+  letter-spacing: 2px;
+}
+
+// Game area
+.game-area {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border: 2px solid $gold-dark;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 60%),
+    linear-gradient(135deg, #050505, #1a1a1a);
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.game-area.active {
+  border-color: $gold-light;
+  box-shadow: 0 0 22px rgba(245, 215, 122, 0.45), inset 0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+// Gold ball
+.ball {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff3b0, $gold 55%, $gold-dark);
+  border: 2px solid $gold-light;
+  box-shadow: 0 0 16px rgba(245, 215, 122, 0.7), 0 4px 10px rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%);
+  transition: left 70ms linear, top 70ms linear;
+}
+
+.center-label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: $gold;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+// Buttons
+.btn-start {
+  --background: linear-gradient(135deg, #f5d77a, #d4af37, #a8841f);
+  --color: #000000;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.btn-stop {
+  --background: #2a2a2a;
+  --color: #{$gold-light};
+  --border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-reset {
+  --border-color: #{$gold};
+  --color: #{$gold};
+  --border-radius: 12px;
+  --border-width: 1px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+// List
+ion-list {
+  background: transparent;
+  margin-top: 12px;
+}
+
+ion-item {
+  --background: transparent;
+  --color: #{$cream};
+  --border-color: rgba(212, 175, 55, 0.25);
+
+  h3 {
+    color: $gold;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: $cream;
+    font-size: 15px;
+  }
+}
+
+.hint {
+  font-size: 13px;
+  text-align: center;
+  color: $gold-dark;
+  margin-top: 16px;
+}

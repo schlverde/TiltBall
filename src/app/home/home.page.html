@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="gold-toolbar">
+    <ion-title>Tilt Ball</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding premium-content">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Motion Control</ion-card-title>
+      <ion-card-subtitle>Tilt your phone to move the ball</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="game-area" [class.active]="isMonitoring">
+        <div class="ball" [style.left.%]="ballX" [style.top.%]="ballY"></div>
+        <div class="center-label">
+          {{ isMonitoring ? 'Sensor Active' : 'Sensor Stopped' }}
+        </div>
+      </div>
+
+      <ion-button expand="block" class="btn-start" (click)="startMonitoring()" [disabled]="isMonitoring">
+        Start Sensor
+      </ion-button>
+
+      <ion-button expand="block" class="btn-stop" (click)="stopMonitoring()" [disabled]="!isMonitoring">
+        Stop Sensor
+      </ion-button>
+
+      <ion-button expand="block" fill="outline" class="btn-reset" (click)="resetBall()">
+        Reset Ball
+      </ion-button>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <h3>X Acceleration</h3>
+            <p>{{ accelerationX.toFixed(2) }} m/s²</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h3>Y Acceleration</h3>
+            <p>{{ accelerationY.toFixed(2) }} m/s²</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h3>Movement</h3>
+            <p>{{ movement }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-text color="danger" *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+      </ion-text>
+
+      <ion-text>
+        <p class="hint">Hold your phone securely and tilt it gently.</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
