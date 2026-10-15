@@ -23,8 +23,8 @@ A black-and-gold Ionic + Angular + Capacitor app. Tilt your phone and the ball m
 
 1. Clone and install:
 ```
-   git clone https://github.com/<your-username>/<your-repo>.git
-   cd <your-repo>
+   git clone https://github.com/schlverde/TiltBall.git
+cd TiltBall
    npm install
 ```
 2. Build the web app and sync it to Android:
